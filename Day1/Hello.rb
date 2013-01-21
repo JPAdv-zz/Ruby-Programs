@@ -1,7 +1,6 @@
 # Different ways of printing "Hello, World!" in Ruby
 # 
-# Answers to exercises from Seven Languages in Seven Weeks.
-# Day 1
+# Author: Jose Padilla
 
 # Simple print "Hello, World!"
 puts "Hello, World!"
