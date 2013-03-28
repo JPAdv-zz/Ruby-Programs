@@ -39,6 +39,7 @@ module ActAsCsv
 	end
 
 	class CsvRow
+		
 		attr_accessor :column, :column_content
 
 		def initialize header, content
@@ -53,6 +54,8 @@ module ActAsCsv
 	end
 end
 
+
+# The RubyCsv class.
 class RubyCsv
 	include ActAsCsv
 	act_as_csv
@@ -65,5 +68,5 @@ end
 
 # Tests the each method.
 csv = RubyCsv.new
-csv.each {|row| puts row.one }
+# Print the contents of row three.
 csv.each {|row| puts row.three}

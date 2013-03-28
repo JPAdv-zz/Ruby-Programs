@@ -6,4 +6,3 @@ A place where I have samples of Ruby programs as I learn the programming languag
 	Some of these small programs are solutions to sample problems
 	from the progmatic book titled "Seven Languages in Seven Weeks"
 	by Bruce A. Tate
-
