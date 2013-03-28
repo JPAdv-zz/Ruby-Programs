@@ -26,23 +26,55 @@ class BinaryTree
         end
 	end
 
-	# Post-Order Traversal
-    def postOrderTraversal(node = @root)
+	# Pre-Order Traversal
+    def preOrderTraversal(node = @root)
         return if (node == nil)
         print node.data.to_s + " "
+        preOrderTraversal(node.left)
+        preOrderTraversal(node.right)
+    end
+
+    # In-Order Traversal
+    def inOrderTraversal(node =@root)
+        return if (node == nil)
+        inOrderTraversal(node.left)
+        print node.data.to_s + " "
+        inOrderTraversal(node.right)
+    end
+
+    # Post-Order Traversal
+    def postOrderTraversal(node = @root)
+        return if (node == nil)
         postOrderTraversal(node.left)
         postOrderTraversal(node.right)
+        print node.data.to_s + " "
     end
 end
 
+=begin
+                    13
+                11      14
+            7      
+        3       9
+    1               10
+=end
+
 #Tests the BinaryTree
-#bst = BinaryTree.new(13)
-#bst.add(11)
-#bst.add(7)
-#bst.add(9)
-#bst.add(10)
-#bst.add(3)
-#bst.add(1)
+bst = BinaryTree.new(13)
+bst.add(11)
+bst.add(7)
+bst.add(9)
+bst.add(10)
+bst.add(3)
+bst.add(1)
+bst.add(14)
+
 # Demonstrating Different Kinds of Traversals
-#puts "Post-Order Traversal:"
-#puts bst.postOrderTraversal
+puts "Post-Order Traversal:"
+puts bst.postOrderTraversal
+
+puts "Pre-Order Traversal:"
+puts bst.preOrderTraversal
+
+puts "In-Order Traversal:"
+puts bst.inOrderTraversal
